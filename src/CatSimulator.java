@@ -23,7 +23,7 @@ public class CatSimulator {
         mainPrompt += "\n2. Feed cat.";
         mainPrompt += "\n3. Neuter cat.";
         mainPrompt += "\n4. Describe cat.";
-        mainPrompt += "\n5. Quit.";
+        mainPrompt += "\n5. Quit.\n";
 
         boolean running = true;
         while (running) {
@@ -32,12 +32,15 @@ public class CatSimulator {
             switch (answer) {
                 case "1":
                     cat.pet();
+                    cat.getCatStatus();
                     break;
                 case "2":
                     cat.feed();
+                    cat.getCatStatus();
                     break;
                 case "3":
                     cat.neuter();
+                    cat.getCatStatus();
                     break;
                 case "4":
                     System.out.println(cat.describe());
@@ -45,6 +48,9 @@ public class CatSimulator {
                 case "5":
                     System.out.println("Thank you for playing Cat Simulator.");
                     running = false;
+                    break;
+                default:
+                    System.out.println("Unknown input.");
                     break;
             }
         }
