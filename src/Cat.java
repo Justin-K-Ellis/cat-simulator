@@ -6,6 +6,8 @@ public class Cat {
     private String color;
     private String sex;
     private boolean isNeutered;
+    private int happinessLevel;
+    private boolean isPurring;
 
     public Cat(String name, int age, String color, String sex, boolean isNeutered) {
         this.name = name;
@@ -13,6 +15,8 @@ public class Cat {
         this.color = color;
         this.sex = sex;
         this.isNeutered = isNeutered;
+        this.happinessLevel = 1;
+        this.isPurring = false;
     }
 
     public String describe() {
@@ -20,7 +24,7 @@ public class Cat {
         String neuteredStatus = this.isNeutered ? "is" : "is not";
         String description = "";
         description += MessageFormat.format("{0} is {1}.", this.name, this.color);
-        description += MessageFormat.format(" {0} {1} neutered.", pronoun, neuteredStatus);
+        description += MessageFormat.format(" {0} {1} neutered, and is {2} years old.", pronoun, neuteredStatus, this.age);
         return description;
     }
 
