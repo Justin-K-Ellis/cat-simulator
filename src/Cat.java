@@ -27,7 +27,7 @@ public class Cat {
         String description = "";
         description += MessageFormat.format("{0} is {1}.", this.name, this.color);
         description += MessageFormat.format("\n{0} {1} neutered, and is {2} years old.", pronoun, neuteredStatus, this.age);
-        description += MessageFormat.format("\n{0} currently has a happiness level of {1} and {2} purring.", pronoun, this.happinessLevel, purringStatus);
+        description += MessageFormat.format("\n{0} currently has a happiness level of {1} and {2} purring.\n", pronoun, this.happinessLevel, purringStatus);
         return description;
     }
 
@@ -38,25 +38,25 @@ public class Cat {
             System.out.println(MessageFormat.format("{0}: 'Meeooow!'", this.name));
             System.out.println(MessageFormat.format("{0} has been neutered!", this.name));
         } else {
-            System.out.println(MessageFormat.format("{0} has already been neutered!", this.name));
+            System.out.println(MessageFormat.format("{0} has already been neutered!\n", this.name));
         }
     }
 
     public void pet() {
         this.happinessLevel++;
-        System.out.println(MessageFormat.format("{0} liked that.", this.name));
+        System.out.println(MessageFormat.format("{0} liked that.\n", this.name));
         if (this.happinessLevel == 5) {
             this.isPurring = true;
-            System.out.println(MessageFormat.format("{0} started purring!", this.name));
+            System.out.println(MessageFormat.format("{0} started purring!\n", this.name));
         }
     }
 
     public void feed() {
         this.happinessLevel++;
-        System.out.println(MessageFormat.format("{0} enjoyed that snack.", this.name));
+        System.out.println(MessageFormat.format("{0} enjoyed that snack.\n", this.name));
     }
 
     public void getCatStatus() {
-        System.out.println(MessageFormat.format("Happiness level: {0}. Purring: {1}.", this.happinessLevel, this.isPurring));
+        System.out.println(MessageFormat.format("Happiness level: {0}. Purring: {1}.\n", this.happinessLevel, this.isPurring));
     }
 }
