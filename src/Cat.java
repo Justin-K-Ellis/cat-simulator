@@ -55,7 +55,7 @@ public class Cat {
         System.out.println(MessageFormat.format("{0} enjoyed that snack.", this.name));
     }
 
-    public boolean isPurring() {
-        return this.isPurring;
+    public void getCatStatus() {
+        System.out.println(MessageFormat.format("Happiness level: {0}. Purring: {1}.", this.happinessLevel, this.isPurring));
     }
 }
