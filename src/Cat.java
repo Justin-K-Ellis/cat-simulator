@@ -35,6 +35,7 @@ public class Cat {
         if (!this.isNeutered) {
             this.isNeutered = true;
             this.happinessLevel = 0;
+            this.isPurring = false;
             System.out.println(MessageFormat.format("{0}: 'Meeooow!'", this.name));
             System.out.println(MessageFormat.format("{0} has been neutered!", this.name));
         } else {
@@ -45,15 +46,20 @@ public class Cat {
     public void pet() {
         this.happinessLevel++;
         System.out.println(MessageFormat.format("{0} liked that.\n", this.name));
+        checkHappiness();
+    }
+
+    public void feed() {
+        this.happinessLevel += 2;
+        System.out.println(MessageFormat.format("{0} enjoyed that snack.\n", this.name));
+        checkHappiness();
+    }
+
+    private void checkHappiness() {
         if (this.happinessLevel == 5) {
             this.isPurring = true;
             System.out.println(MessageFormat.format("{0} started purring!\n", this.name));
         }
-    }
-
-    public void feed() {
-        this.happinessLevel++;
-        System.out.println(MessageFormat.format("{0} enjoyed that snack.\n", this.name));
     }
 
     public void getCatStatus() {
