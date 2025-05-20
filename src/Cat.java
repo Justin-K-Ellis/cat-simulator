@@ -34,6 +34,7 @@ public class Cat {
     public void neuter() {
         if (!this.isNeutered) {
             this.isNeutered = true;
+            this.happinessLevel = 0;
             System.out.println(MessageFormat.format("{0}: 'Meeooow!'", this.name));
             System.out.println(MessageFormat.format("{0} has been neutered!", this.name));
         } else {

@@ -25,21 +25,26 @@ public class CatSimulator {
         mainPrompt += "\n4. Describe cat.";
         mainPrompt += "\n5. Quit.";
 
-
-        while (true) {
+        boolean running = true;
+        while (running) {
             System.out.println(mainPrompt);
             String answer = scanner.nextLine();
             switch (answer) {
                 case "1":
                     cat.pet();
+                    break;
                 case "2":
-                    //todo
+                    cat.feed();
+                    break;
                 case "3":
                     cat.neuter();
+                    break;
                 case "4":
-                    cat.describe();
+                    System.out.println(cat.describe());
+                    break;
                 case "5":
                     System.out.println("Thank you for playing Cat Simulator.");
+                    running = false;
                     break;
             }
         }
