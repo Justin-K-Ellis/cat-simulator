@@ -43,9 +43,14 @@ public class Cat {
 
     public void pet() {
         this.happinessLevel += 1;
+        System.out.println(MessageFormat.format("{0} liked that.", this.name));
         if (this.happinessLevel == 5) {
             this.isPurring = true;
             System.out.println(MessageFormat.format("{0} started purring!", this.name));
         }
+    }
+
+    public boolean isPurring() {
+        return this.isPurring;
     }
 }
