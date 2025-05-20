@@ -4,6 +4,6 @@ public class CatSimulator {
 
         Cat mou = new Cat("Mouchan", 4, "black and white", "male", true);
         System.out.println(mou.describe());
-        mou.neuter();
+//        mou.neuter();
     }
 }
