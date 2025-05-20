@@ -9,12 +9,12 @@ public class Cat {
     private int happinessLevel;
     private boolean isPurring;
 
-    public Cat(String name, int age, String color, String sex, boolean isNeutered) {
+    public Cat(String name, int age, String color, String sex) {
         this.name = name;
         this.age = age;
         this.color = color;
         this.sex = sex;
-        this.isNeutered = isNeutered;
+        this.isNeutered = false;
         this.happinessLevel = 1;
         this.isPurring = false;
     }
